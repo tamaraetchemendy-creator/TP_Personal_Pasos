@@ -10,6 +10,43 @@
   body {
   background-color: #FFF5F7;
   }
+    .kpi-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px auto;
+}
+.kpi-card {
+  width: 260px;
+  padding: 25px;
+  text-align: center;
+  background-color: #F4D6DF;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kpi-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.kpi-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+    .kpi-card:hover .kpi-icon {
+  transform: scale(1.25) rotate(-5deg);
+}
+.kpi-number {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #357F7A;
+}
+.kpi-label {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  margin-top: 8px;
+  color: #555555;
+}
   .card {
     background-color: #ffffff;
     border: 1px solid #6FAEAA;
@@ -63,8 +100,27 @@
   color: #333333;
 }
 </style>
+  
   <h1>Seguimiento diario de pasos</h1>
-
+  
+<div class="kpi-container">
+  <div class="kpi-card">
+    <div class="kpi-icon">📅</div>
+    <div class="kpi-number">84</div>
+    <div class="kpi-label">DÍAS ANALIZADOS</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">👟</div>
+    <div class="kpi-number">688.776</div>
+    <div class="kpi-label">PASOS TOTALES</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">📊</div>
+    <div class="kpi-number">8.199</div>
+    <div class="kpi-label">PROMEDIO DIARIO</div>
+  </div>
+</div>
+  
   <div class="card">
     <h2>¿Cómo evolucionó mi actividad durante los últimos tres meses?</h2>
     <div class="chart-container">
